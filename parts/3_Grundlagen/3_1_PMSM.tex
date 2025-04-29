@@ -1,0 +1,135 @@
+\subsection{Permanentmagneterregte Synchronmotoren} \label{sec:pmsm}
+
+\blindtext{}
+
+% https://de.mathworks.com/help/autoblks/ref/interiorpmsm.html
+\vspace{0.5cm}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.65\textwidth]{media/pic.png}
+    \caption{PMSM mit Polpaarzahl 1~\cite{MathWorksPMSM}}
+    \label{fig:PMSM_dq}
+\end{figure}
+
+\newpage{}
+
+\blindtext{}
+
+\vspace{0.3cm}
+
+% Clarke-Transformation
+\begin{formel}
+    \begin{equation}
+        \label{eq:clarke_alpha}
+        I_\alpha = \frac{2}{3} \left(I_a - \frac{I_b + I_c}{2} \right)
+    \end{equation}
+    \caption[Clarke-Transformation $I_\alpha$~\protect{\cite[S.~309]{clarkeCircuitAnalysisAC1943}}]{}
+\end{formel}
+
+\vspace{-1cm}
+
+\begin{formel}
+\begin{equation}
+    \label{eq:clarke_beta}
+    I_\beta = \frac{1}{\sqrt{3}} (I_b-I_c)
+\end{equation}
+    \caption[Clarke-Transformation $I_\beta$~\protect{\cite[S.~309]{clarkeCircuitAnalysisAC1943}}]{}
+\end{formel}
+
+\vspace{-1cm}
+
+\begin{formel}
+    \begin{equation}
+        \label{eq:clarke_mat}
+        \begin{bmatrix}
+            I_\alpha(t) \\
+            I_\beta(t)
+        \end{bmatrix} 
+        = 
+        \begin{bmatrix}
+            1                   &   0 \\
+            \frac{1}{\sqrt{3}}  &   \frac{2}{\sqrt{3}}
+        \end{bmatrix}
+        \begin{bmatrix}
+            I_U \\
+            I_V
+        \end{bmatrix}
+    \end{equation}
+    \caption[Clarke-Transformation in Matrixschreibweise]{}
+\end{formel}
+
+\vspace{-0.8cm}
+\blindtext{}
+
+\vspace{0.3cm}
+
+% Park-Transformation
+\begin{formel}
+    \begin{equation}
+        \label{eq:park}
+        \begin{bmatrix}
+            I_d \\
+            I_q
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+            \cos(\theta)  &   \sin(\theta) \\
+            -\sin(\theta) &   \cos(\theta)
+        \end{bmatrix}
+        \begin{bmatrix}
+            I_\alpha \\
+            I_\beta
+        \end{bmatrix}
+    \end{equation}
+    \caption[Park-Transformation~\cite{MathWorksPark}]{}
+\end{formel}
+
+\vspace{-0.8cm}
+\blindtext{}
+
+\vspace{0.3cm}
+
+% Drehmomentgleichung
+\begin{formel}
+    \begin{equation}
+        \label{eq:Moment}
+        M = \frac{3}{2} * pp * (\Psi_{d} * I_{q} - \Psi_{q} * I_{d})
+    \end{equation}
+    \caption[Drehmomentgleichung aus magnetischem Fluss~\protect{\cite[S.~507]{bolteElektrischeMaschinenGrundlagen2018}}]{}
+\end{formel}
+
+\vspace{-1cm}
+
+\begin{formel}
+    \begin{equation}
+        \label{eq:Psi-L}
+        \Psi = I_d * L_d
+    \end{equation}
+    \caption[Zusammenhang magnetischer Fluss, Strom und Induktivität~\protect{\cite[S.~43]{bolteElektrischeMaschinenGrundlagen2018}}]{}
+\end{formel}
+
+\vspace{-1cm}
+
+\begin{formel}
+    \begin{equation}
+        \label{eq:Moment-L}
+        M = \frac{3}{2} * pp * I_d * I_q * (L_d - L_q)
+    \end{equation}
+    \caption[Drehmomentgleichung mit Induktivität]{}
+\end{formel}
+
+\vspace{-0.8cm}
+
+\blindtext{}
+
+\vspace{0.3cm}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{media/pic.png}
+    \caption{Rotor mit vergrabenen (links) und Oberflächenmagneten (rechts)~\cite[S. 370]{schroederElektrischeAntriebeGrundlagen2021}}
+    \label{fig:Magnete}
+\end{figure}
+
+\newpage{}
+\blindtext{}
